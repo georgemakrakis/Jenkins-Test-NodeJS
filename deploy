@@ -1,6 +1,7 @@
 #!/bin/sh
-
-cd ~/Jenkins-Test-NodeJS
-git pull origin master
-npm install --production
-pm2 restart all
+ssh makrakis@195.201.123.35 <<EOF
+ cd ~/Jenkins-Test-NodeJS
+ git pull origin master
+ npm install --production
+ pm2 restart all
+EOF
